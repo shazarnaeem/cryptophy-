@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="../index.html">Cryptophy</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h2>QR Code Generator</h2>
+            <p class="tool-description">Generate QR codes from text, URLs, or other content. Customize size and colors.</p>
+
+            <div class="conversion-section">
+                <div class="input-group">
+                    <label for="qr-content">Enter Content:</label>
+                    <div class="input-with-button">
+                        <textarea id="qr-content" placeholder="Enter text or URL to generate QR code"></textarea>
+                    </div>
+
+                    <div class="qr-options">
+                        <div class="option-group">
+                            <label for="qr-size">Size:</label>
+                            <select id="qr-size">
+                                <option value="200">Small (200x200)</option>
+                                <option value="300" selected>Medium (300x300)</option>
+                                <option value="400">Large (400x400)</option>
+                            </select>
+                        </div>
+                        <div class="option-group">
+                            <label for="qr-color">Color:</label>
+                            <input type="color" id="qr-color" value="#000000">
+                        </div>
+                    </div>
+
+                    <button id="generate-btn" class="convert-button">
+                        <i class="fas fa-qrcode"></i>
+                        Generate QR Code
+                    </button>
+                </div>
+
+                <div class="output-section">
+                    <div class="output-header">
+                        <h3>Generated QR Code</h3>
+                    </div>
+                    <div class="qr-output">
+                        <canvas id="qr-canvas"></canvas>
+                        <div class="qr-actions">
+                            <button id="download-btn" class="action-button" disabled>
+                                <i class="fas fa-download"></i>
+                                Download
+                            </button>
+                            <button id="copy-btn" class="action-button" disabled>
+                                <i class="fas fa-copy"></i>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p><i class="fas fa-info-circle"></i> Enter any text or URL to generate a QR code.</p>
+                <p><i class="fas fa-info-circle"></i> Customize the size and color of your QR code.</p>
+                <p><i class="fas fa-info-circle"></i> Download as PNG or copy to clipboard.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="qr-generator.js"></script>
+</body>
+</html> 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryption - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="../index.html">Cryptophy</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h2>Text Encryption/Decryption</h2>
+            <select id="encryption-algorithm">
+                <option value="caesar">Caesar Cipher</option>
+                <option value="vigenere">Vigenère Cipher</option>
+                <option value="aes">AES (Advanced Encryption Standard)</option>
+                <option value="rot13">ROT13</option>
+                <option value="atbash">Atbash</option>
+                <option value="railfence">Rail Fence Cipher</option>
+                <option value="columnar">Columnar Transposition</option>
+            </select>
+            <div id="key-input-container">
+                <input type="text" id="key" placeholder="Enter encryption key">
+            </div>
+            <div id="rail-fence-options" style="display: none;">
+                <input type="number" id="rails" placeholder="Number of rails" min="2" value="2">
+            </div>
+            <div id="columnar-options" style="display: none;">
+                <input type="text" id="columnar-key" placeholder="Columnar key (e.g., 'KEY')">
+            </div>
+            <textarea id="input-text" placeholder="Enter text to encrypt/decrypt"></textarea>
+            <div class="button-group">
+                <button onclick="encryptText()" id="encrypt-button">
+                    <span class="button-text">Encrypt</span>
+                    <span class="loading-spinner" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                </button>
+                <button onclick="decryptText()" id="decrypt-button">
+                    <span class="button-text">Decrypt</span>
+                    <span class="loading-spinner" style="display: none;">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="output-container">
+                <textarea id="output-text" readonly placeholder="Result will appear here"></textarea>
+                <button onclick="copyToClipboard()" id="copy-button" class="copy-button">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+            <div class="info-text">
+                <p>Note: For AES encryption, a secure key will be generated if none is provided.</p>
+                <p>For Rail Fence Cipher, enter the number of rails (minimum 2).</p>
+                <p>For Columnar Transposition, enter a key word (e.g., 'KEY').</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="text-encryption.js"></script>
+</body>
+</html> 

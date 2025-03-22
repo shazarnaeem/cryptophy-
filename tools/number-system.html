@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number System Converter - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="../index.html">Cryptophy</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h2>Number System Converter</h2>
+            <p class="tool-description">Convert numbers between different number systems (Binary, Decimal, Hexadecimal, Octal, etc.).</p>
+
+            <div class="conversion-section">
+                <div class="input-group">
+                    <label for="number-input">Enter Number:</label>
+                    <input type="text" id="number-input" placeholder="Enter the number to convert...">
+                    
+                    <div class="base-selection">
+                        <div class="select-group">
+                            <label for="from-base">From Base:</label>
+                            <select id="from-base">
+                                <option value="2">Binary (Base 2)</option>
+                                <option value="8">Octal (Base 8)</option>
+                                <option value="10" selected>Decimal (Base 10)</option>
+                                <option value="16">Hexadecimal (Base 16)</option>
+                                <option value="32">Base 32</option>
+                                <option value="36">Base 36</option>
+                                <option value="62">Base 62</option>
+                            </select>
+                        </div>
+
+                        <div class="select-group">
+                            <label for="to-base">To Base:</label>
+                            <select id="to-base">
+                                <option value="2">Binary (Base 2)</option>
+                                <option value="8">Octal (Base 8)</option>
+                                <option value="10">Decimal (Base 10)</option>
+                                <option value="16" selected>Hexadecimal (Base 16)</option>
+                                <option value="32">Base 32</option>
+                                <option value="36">Base 36</option>
+                                <option value="62">Base 62</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="convert" class="convert-button">
+                        <i class="fas fa-exchange-alt"></i>
+                        Convert
+                    </button>
+
+                    <div class="output-with-copy">
+                        <input type="text" id="result-output" readonly placeholder="Result will appear here...">
+                        <button id="copy-result" class="copy-button" title="Copy result">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p><i class="fas fa-info-circle"></i> Enter a number in the selected base system (e.g., "FF" for hexadecimal, "1010" for binary).</p>
+                <p><i class="fas fa-info-circle"></i> The result will be shown with the appropriate prefix (0b for binary, 0o for octal, 0x for hexadecimal).</p>
+                <p><i class="fas fa-info-circle"></i> Click the copy button to copy the result to your clipboard.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="number-system.js"></script>
+</body>
+</html> 

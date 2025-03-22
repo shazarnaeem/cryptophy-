@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Code Generator - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="../index.html">Cryptophy</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h2>ASCII Code Generator</h2>
+            <p class="tool-description">Convert text to ASCII codes and vice versa. Enter text to get its ASCII codes, or enter ASCII codes (space-separated numbers) to convert back to text.</p>
+
+            <div class="conversion-section">
+                <div class="input-group">
+                    <label for="text-input">Text to ASCII:</label>
+                    <textarea id="text-input" placeholder="Enter text to convert to ASCII codes..."></textarea>
+                    <button id="convert-to-ascii" class="convert-button">
+                        <i class="fas fa-arrow-right"></i>
+                        Convert to ASCII
+                    </button>
+                    <div class="output-with-copy">
+                        <textarea id="ascii-output" readonly placeholder="ASCII codes will appear here..."></textarea>
+                        <button id="copy-ascii" class="copy-button" title="Copy ASCII codes">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="ascii-input">ASCII to Text:</label>
+                    <textarea id="ascii-input" placeholder="Enter ASCII codes (space-separated numbers)..."></textarea>
+                    <button id="convert-to-text" class="convert-button">
+                        <i class="fas fa-arrow-right"></i>
+                        Convert to Text
+                    </button>
+                    <div class="output-with-copy">
+                        <textarea id="text-output" readonly placeholder="Converted text will appear here..."></textarea>
+                        <button id="copy-text" class="copy-button" title="Copy text">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p><i class="fas fa-info-circle"></i> ASCII codes are space-separated numbers representing each character.</p>
+                <p><i class="fas fa-info-circle"></i> Click the copy button to copy the result to your clipboard.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="ascii-code.js"></script>
+</body>
+</html> 

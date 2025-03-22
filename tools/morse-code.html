@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="../index.html">Cryptophy</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h2>Morse Code Translator</h2>
+            <p class="tool-description">Convert text to Morse code and vice versa. Supports letters, numbers, and basic punctuation.</p>
+
+            <div class="conversion-section">
+                <div class="input-group">
+                    <label for="text-input">Enter Text:</label>
+                    <div class="input-with-button">
+                        <textarea id="text-input" placeholder="Enter text to convert to Morse code"></textarea>
+                        <button id="text-to-morse" class="convert-button">
+                            <i class="fas fa-arrow-right"></i>
+                            To Morse
+                        </button>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="output-header">
+                            <h3>Morse Code</h3>
+                        </div>
+                        <div class="output-with-copy">
+                            <textarea id="morse-output" readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="morse-input">Enter Morse Code:</label>
+                    <div class="input-with-button">
+                        <textarea id="morse-input" placeholder="Enter Morse code to convert to text (use dots and dashes)"></textarea>
+                        <button id="morse-to-text" class="convert-button">
+                            <i class="fas fa-arrow-left"></i>
+                            To Text
+                        </button>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="output-header">
+                            <h3>Text</h3>
+                        </div>
+                        <div class="output-with-copy">
+                            <textarea id="text-output" readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p><i class="fas fa-info-circle"></i> Use dots (.) for short signals and dashes (-) for long signals.</p>
+                <p><i class="fas fa-info-circle"></i> Use spaces between letters and forward slashes (/) between words.</p>
+                <p><i class="fas fa-info-circle"></i> Example: "HELLO WORLD" → .... . .-.. .-.. --- / .-- --- .-. .-.. -..</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="morse-code.js"></script>
+</body>
+</html> 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="../index.html">Cryptophy</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html#home">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h2>Hash Generator</h2>
+            <select id="hash-algorithm">
+                <option value="sha256">SHA-256</option>
+                <option value="sha512">SHA-512</option>
+                <option value="sha1">SHA-1</option>
+            </select>
+            <textarea id="hash-input" placeholder="Enter text to generate hash"></textarea>
+            <button onclick="generateHash()" id="generate-button">
+                <span class="button-text">Generate Hash</span>
+                <span class="loading-spinner" style="display: none;">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </span>
+            </button>
+            <input type="text" id="hash-output" readonly placeholder="Hash will appear here">
+            <div class="info-text">
+                <p>Note: This tool uses the Web Crypto API for secure hash generation.</p>
+                <p>MD5 is not supported as it is considered cryptographically broken.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="hash-generator.js"></script>
+</body>
+</html> 

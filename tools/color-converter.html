@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Code Converter - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="../index.html">Cryptophy</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h2>Color Code Converter</h2>
+            <p class="tool-description">Convert between different color formats including HEX, RGB, HSL, and named colors.</p>
+
+            <div class="conversion-section">
+                <div class="input-group">
+                    <label for="color-input">Enter Color:</label>
+                    <div class="color-input-group">
+                        <input type="text" id="color-input" placeholder="Enter color code (e.g., #FF0000, rgb(255,0,0), red)">
+                        <input type="color" id="color-picker">
+                    </div>
+
+                    <div class="color-options">
+                        <div class="option-group">
+                            <label for="color-format">Output Format:</label>
+                            <select id="color-format">
+                                <option value="hex">HEX (#RRGGBB)</option>
+                                <option value="rgb">RGB (r,g,b)</option>
+                                <option value="rgba">RGBA (r,g,b,a)</option>
+                                <option value="hsl">HSL (h,s%,l%)</option>
+                                <option value="hsla">HSLA (h,s%,l%,a)</option>
+                                <option value="name">Named Color</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="convert-color" class="convert-button">
+                        <i class="fas fa-exchange-alt"></i>
+                        Convert Color
+                    </button>
+
+                    <div class="color-output">
+                        <div class="output-header">
+                            <h3>Converted Color</h3>
+                            <button id="copy-color" class="copy-button">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                        <div class="output-with-copy">
+                            <input type="text" id="color-result" readonly>
+                        </div>
+                        <div id="color-preview"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p><i class="fas fa-info-circle"></i> Enter a color code in any supported format or use the color picker.</p>
+                <p><i class="fas fa-info-circle"></i> Supported formats: HEX (#RRGGBB), RGB, RGBA, HSL, HSLA, and named colors.</p>
+                <p><i class="fas fa-info-circle"></i> Click the copy button to copy the converted color code to your clipboard.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="color-converter.js"></script>
+</body>
+</html> 

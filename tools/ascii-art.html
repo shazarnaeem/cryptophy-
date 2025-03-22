@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Generator - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../index.html#tools">Tools</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h1>ASCII Art Generator</h1>
+            <p class="tool-description">Convert text into ASCII art using different styles.</p>
+
+            <div class="input-group">
+                <label for="input-text">Enter Text:</label>
+                <textarea id="input-text" rows="3" placeholder="Enter text to convert to ASCII art..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Style:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="style" value="standard" checked>
+                        Standard (Asterisks)
+                    </label>
+                    <label>
+                        <input type="radio" name="style" value="block">
+                        Block (Solid)
+                    </label>
+                    <label>
+                        <input type="radio" name="style" value="simple">
+                        Simple (Letters)
+                    </label>
+                </div>
+            </div>
+
+            <button id="generate-button" onclick="generateAsciiArt()" class="tool-button">
+                <span class="button-text">Generate ASCII Art</span>
+                <i class="fas fa-spinner fa-spin loading-spinner" style="display: none;"></i>
+            </button>
+
+            <div class="output-group">
+                <div class="output-header">
+                    <label for="output-text">Generated ASCII Art:</label>
+                    <button id="copy-button" onclick="copyToClipboard()" class="copy-button">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <pre id="output-text" class="output-text"></pre>
+            </div>
+
+            <div class="info-text">
+                <p><i class="fas fa-info-circle"></i> Note: Only uppercase letters (A-Z) and spaces are supported.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="ascii-art.js"></script>
+</body>
+</html> 

@@ -1,0 +1,834 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.logo h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #fff;
+    padding: 0 1rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Tools Section */
+.tools-section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tools-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.tool-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-card i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.tool-card h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.tool-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.tool-button:hover {
+    background-color: #2980b9;
+}
+
+/* Tool Pages */
+.tool-page {
+    padding: 8rem 2rem 2rem;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.tool-page .tool-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.tool-page h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.tool-container select,
+.tool-container input[type="text"],
+.tool-container input[type="number"],
+.tool-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.tool-container textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.tool-container .options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tool-container .options label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tool-container .button-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tool-container button {
+    flex: 1;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.tool-container button:hover {
+    background-color: #2980b9;
+}
+
+.tool-container button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.loading-spinner {
+    display: inline-block;
+}
+
+.loading-spinner i {
+    font-size: 1.2rem;
+}
+
+.info-text {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.info-text p {
+    margin-bottom: 0.5rem;
+}
+
+.info-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 5rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+#contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1001;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-container .options {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-container .button-group {
+        flex-direction: column;
+    }
+}
+
+/* Output container and copy button styles */
+.output-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.output-container textarea {
+    width: 100%;
+    padding-right: 3rem;
+}
+
+.copy-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.copy-button:hover {
+    color: #333;
+}
+
+.copy-button.copied {
+    color: #4CAF50;
+}
+
+.copy-button i {
+    font-size: 1.2rem;
+}
+
+/* Input copy button styles */
+.input-copy {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.input-copy:hover {
+    color: #3498db;
+}
+
+.input-copy.copied {
+    color: #27ae60;
+}
+
+.input-with-button {
+    position: relative;
+}
+
+/* Remove copy buttons from other elements */
+.output-header .copy-button,
+.qr-actions .copy-button,
+.color-output .copy-button {
+    display: none;
+}
+
+/* ASCII Art Generator Styles */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+    margin: 0;
+}
+
+.output-text {
+    font-family: monospace;
+    white-space: pre;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+    margin-top: 0.5rem;
+    min-height: 100px;
+    overflow-x: auto;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.copy-button {
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.copy-button:hover {
+    color: #0d6efd;
+}
+
+.copy-button.copied {
+    color: #198754;
+}
+
+.info-text {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    color: #495057;
+}
+
+.info-text i {
+    margin-right: 0.5rem;
+    color: #0d6efd;
+}
+
+/* ASCII Code Generator Styles */
+.conversion-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.input-group textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.convert-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.convert-button:hover {
+    background-color: #2980b9;
+}
+
+.output-with-copy {
+    position: relative;
+    width: 100%;
+}
+
+.output-with-copy textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.8rem;
+    padding-right: 3rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    resize: vertical;
+}
+
+.copy-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s;
+}
+
+.copy-button:hover {
+    color: #0d6efd;
+}
+
+.copy-button.copied {
+    color: #198754;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 1px solid #f5c6cb;
+}
+
+/* Number System Converter Styles */
+.base-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.select-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.select-group label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.select-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.select-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.input-group input[type="text"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.output-with-copy {
+    position: relative;
+    width: 100%;
+}
+
+.output-with-copy input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    padding-right: 3rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+}
+
+.copy-button {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-button:hover {
+    color: #0d6efd;
+}
+
+.copy-button.copied {
+    color: #198754;
+}
+
+.error-message {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    border: 1px solid #f5c6cb;
+}
+
+/* QR Code Generator Styles */
+.qr-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.option-group label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.option-group select,
+.option-group input[type="color"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.option-group input[type="color"] {
+    height: 42px;
+    padding: 0.3rem;
+}
+
+.qr-output {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+#qr-container {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.qr-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.action-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.action-button:hover {
+    background-color: #2980b9;
+}
+
+.action-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+.action-button.copied {
+    background-color: #27ae60;
+}
+
+/* Color Code Converter Styles */
+.color-input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.color-input-group input[type="text"] {
+    flex: 1;
+}
+
+.color-input-group input[type="color"] {
+    width: 50px;
+    height: 42px;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.color-output {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.color-output h3 {
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+#color-preview {
+    width: 100%;
+    height: 100px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+} 

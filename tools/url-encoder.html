@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder/Decoder - Cryptophy</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1><a href="../index.html">Cryptophy</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tools">Tools</a></li>
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tool-page">
+        <div class="tool-container">
+            <h2>URL Encoder/Decoder</h2>
+            <p class="tool-description">Encode and decode URL-safe strings. Handles special characters, spaces, and Unicode characters.</p>
+
+            <div class="conversion-section">
+                <div class="input-group">
+                    <label for="text-input">Enter Text:</label>
+                    <div class="input-with-button">
+                        <textarea id="text-input" placeholder="Enter text to encode"></textarea>
+                        <button id="encode-btn" class="convert-button">
+                            <i class="fas fa-arrow-right"></i>
+                            Encode
+                        </button>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="output-header">
+                            <h3>Encoded URL</h3>
+                        </div>
+                        <div class="output-with-copy">
+                            <textarea id="encoded-output" readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="encoded-input">Enter Encoded URL:</label>
+                    <div class="input-with-button">
+                        <textarea id="encoded-input" placeholder="Enter encoded URL to decode"></textarea>
+                        <button id="decode-btn" class="convert-button">
+                            <i class="fas fa-arrow-left"></i>
+                            Decode
+                        </button>
+                    </div>
+
+                    <div class="output-section">
+                        <div class="output-header">
+                            <h3>Decoded Text</h3>
+                        </div>
+                        <div class="output-with-copy">
+                            <textarea id="decoded-output" readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p><i class="fas fa-info-circle"></i> URL encoding converts special characters to their percent-encoded equivalents.</p>
+                <p><i class="fas fa-info-circle"></i> Spaces are converted to %20 or +, and special characters are encoded as %XX.</p>
+                <p><i class="fas fa-info-circle"></i> Example: "Hello World!" → "Hello%20World%21"</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cryptophy. All rights reserved.</p>
+    </footer>
+
+    <script src="url-encoder.js"></script>
+</body>
+</html> 
