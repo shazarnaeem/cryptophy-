@@ -101,7 +101,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - **Shazar Naeem**
   - GitHub: [@shazarnaeem](https://github.com/shazarnaeem)
-  - Website: [shazarnaeem5.com](https://shazarnaeem5.com)
+  - Website: [shazarnaeem.netlify.app](shazarnaeem.netlify.app)
 
 ## Acknowledgments
 
