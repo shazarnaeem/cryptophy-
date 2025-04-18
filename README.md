@@ -75,7 +75,7 @@ Cryptophy is a comprehensive web-based toolkit for various cryptography and enco
 
 ## Getting Started
 
-1. Visit [Cryptophy](cryptophy.netlify.app)
+1. Visit [cryptophy.netlify.app](cryptophy.netlify.app)
 2. Choose the tool you want to use from the homepage
 3. Enter your input data
 4. Get your results instantly
